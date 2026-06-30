@@ -10,7 +10,7 @@ window.SITE = {
     "Incoming Applied Scientist @ Amazon (Alexa AI)",
     "Visiting Scholar @ University of Minnesota",
   ],
-  profilePic: "assets/img/prof_pic.jpg",
+  profilePic: "assets/img/youngjun_lee.jpeg",
   location: "Minneapolis, MN, USA",
 
   /* ---- Contact / social links ---- */
