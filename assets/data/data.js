@@ -46,7 +46,7 @@ window.SITE = {
     { date: "Jun 2026", html: `Invited speaker at the <strong>AiDDA Conference 2026</strong> (OpenEvolve Team Session), presenting <em>Evolution Fine-Tuning</em>.` },
     { date: "May 2026", html: `Invited speaker at the <strong>CAIS 2026 Workshop on AI Agents for Discovery in the Wild (AID-Wild)</strong>; <em>Evolution Fine-Tuning</em> accepted as an Oral.` },
     { date: "Jan 2026", html: `<strong>RefineBench</strong> accepted to <strong>ICLR 2026</strong> (also Top 1%, Oral, Best Paper Runner-up at the Multi-Turn Interactions in LLMs workshop @ NeurIPS 2025).` },
-    { date: "Oct 2025", html: `Started as an <strong>Applied Scientist Intern</strong> at <strong>Amazon</strong>, working on partial chain-of-thought fine-tuning for robust reasoning LMs.` },
+    { date: "Jul 2025", html: `Started as an <strong>Applied Scientist Intern</strong> at <strong>Amazon</strong>, working on partial chain-of-thought fine-tuning for robust reasoning LMs.` },
     { date: "Aug 2025", html: `Successfully defended my Ph.D. at <strong>KAIST</strong>. ` },
     { date: "Mar 2026", html: `Joined the <strong>University of Minnesota</strong> as a Visiting Scholar.` },
   ],
