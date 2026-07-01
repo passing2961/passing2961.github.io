@@ -25,7 +25,8 @@ window.SITE = {
   /* ---- About-page bio paragraphs (HTML allowed) ---- */
   bio: [
     `I am an incoming <strong>Applied Scientist</strong> at <strong>Amazon</strong> (Alexa AI), starting Fall 2026,
-     and currently a <strong>Visiting Scholar</strong> at the <strong>University of Minnesota</strong>.`,
+     and currently a <strong>Visiting Scholar</strong> at the <strong>University of Minnesota</strong>, working with
+     Prof. <a href="https://dykang.github.io/" target="_blank" rel="noopener">Dongyeop Kang</a>.`,
     `I completed my <strong>Ph.D. in Computer Science</strong> at <strong>KAIST</strong> (School of Computing),
      where I was fortunate to be advised by Prof. <a href="https://scholar.google.com/citations?user=KExk0BUAAAAJ" target="_blank" rel="noopener">Ho-Jin Choi</a>
      in the Knowledge Engineering and Artificial Intelligence Lab. Before that, I received my B.S. in Software from
@@ -33,8 +34,8 @@ window.SITE = {
     `My research centers on <strong>large language models</strong> &mdash; building conversational and multi-modal agents,
      constructing large-scale high-quality datasets, and evaluating and improving their reasoning, refinement, and reliability.
      During my Ph.D. I built LLM-based frameworks for empathetic, personalized, and image-sharing dialogue
-     (e.g., <em>Stark</em>, <em>DialogCC</em>), and studied the perception and multi-turn behavior of large vision&ndash;language models
-     (e.g., <em>MultiVerse</em>). I also worked on evaluating refinement capability in language models (<em>RefineBench</em>).`,
+     (e.g., <a href="publications.html#pub-stark">Stark</a>, <a href="publications.html#pub-dialogcc">DialogCC</a>), and studied the perception and multi-turn behavior of large vision&ndash;language models
+     (e.g., <a href="publications.html#pub-multiverse">MultiVerse</a>). I also worked on evaluating refinement capability in language models (<a href="publications.html#pub-refinebench">RefineBench</a>).`,
     `Currently, I study how to internalize and evaluate <strong>scientific-discovery capability</strong> in AI agents,
      including evolution-based fine-tuning across hundreds of optimization tasks and the mechanisms behind robust
      chain-of-thought reasoning.`,
@@ -46,9 +47,8 @@ window.SITE = {
     { date: "May 2026", html: `Invited speaker at the <strong>CAIS 2026 Workshop on AI Agents for Discovery in the Wild (AID-Wild)</strong>; <em>Evolution Fine-Tuning</em> accepted as an Oral.` },
     { date: "Jan 2026", html: `<strong>RefineBench</strong> accepted to <strong>ICLR 2026</strong> (also Top 1%, Oral, Best Paper Runner-up at the Multi-Turn Interactions in LLMs workshop @ NeurIPS 2025).` },
     { date: "Oct 2025", html: `Started as an <strong>Applied Scientist Intern</strong> at <strong>Amazon</strong>, working on partial chain-of-thought fine-tuning for robust reasoning LMs.` },
-    { date: "Jul 2025", html: `<strong>MultiVerse</strong> accepted to <strong>ICCV 2025</strong>.` },
     { date: "Aug 2025", html: `Successfully defended my Ph.D. at <strong>KAIST</strong>. ` },
-    { date: "Mar 2025", html: `Joined the <strong>University of Minnesota</strong> as a Visiting Scholar.` },
+    { date: "Mar 2026", html: `Joined the <strong>University of Minnesota</strong> as a Visiting Scholar.` },
   ],
 
   /* ---- Education ---- */
@@ -124,6 +124,7 @@ window.SITE = {
         authors: `<b>Young-Jun Lee</b><sup>*</sup>, Seungone Kim<sup>*</sup>, Minki Kang, Alistair Cheong Liang Chuen, Zerui Chen, Seungho Han, Taehee Jung, Dongyeop Kang`,
         venue: "Under review", note: "Accepted to CAIS AID-Wild 2026, Oral.",
         links: {
+          project: "https://open-galapagos.github.io/evolution_finetuning/",
           paper: "https://arxiv.org/abs/2606.29082",
           code: "https://github.com/Open-Galapagos/evolution-fine-tuning",
           dataset: "https://huggingface.co/datasets/minnesotanlp/Finch-Collection",

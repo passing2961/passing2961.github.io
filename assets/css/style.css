@@ -254,6 +254,7 @@ h2.section-heading::after {
   border-bottom: 1px solid var(--border);
 }
 .pub-item:last-child { border-bottom: none; }
+.pub-list.no-num .pub-item { grid-template-columns: 1fr; gap: 0; }
 .pub-num {
   color: var(--text-muted);
   font-size: 0.85rem;
@@ -308,6 +309,11 @@ h2.section-heading::after {
   text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+.pub-link-project:hover {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
 }
 .pub-link-paper:hover {
   border-color: var(--accent);
