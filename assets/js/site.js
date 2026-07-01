@@ -60,12 +60,29 @@
     return `<div class="socials">${items}</div>`;
   }
 
+  /* ---------- Date helpers ---------- */
+  const MONTHS = {
+    jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
+    jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11,
+  };
+  // Parses the first "Mon YYYY" found in a string into a sortable number.
+  // "Present" / no match sorts to the far future so it stays on top.
+  function dateVal(str) {
+    if (!str) return -1;
+    if (/present/i.test(str) && !/\d{4}/.test(str.split(/present/i)[0])) return Number.MAX_SAFE_INTEGER;
+    const m = String(str).match(/([A-Za-z]{3})[a-z]*\.?\s+(\d{4})/);
+    if (!m) return -1;
+    const mon = MONTHS[m[1].toLowerCase()];
+    return parseInt(m[2], 10) * 12 + (mon == null ? 0 : mon);
+  }
+
   /* ---------- About page ---------- */
   function renderAbout() {
     const mount = document.getElementById("about");
     if (!mount) return;
     const bio = S.bio.map((p) => `<p>${p}</p>`).join("");
-    const news = S.news
+    const news = [...S.news]
+      .sort((a, b) => dateVal(b.date) - dateVal(a.date))
       .map((n) => `<div class="news-row"><div class="news-date">${n.date}</div><p class="news-body">${n.html}</p></div>`)
       .join("");
 
@@ -73,16 +90,16 @@
 
     mount.innerHTML = `
       <section class="hero">
-        <div class="hero-text">
-          <h1 class="hero-name">${S.name}</h1>
-          <p class="hero-roles">${S.roles.map((r) => `<span>${r}</span>`).join("")}</p>
-          <div class="bio">${bio}</div>
-        </div>
         <aside class="profile">
           <img src="${S.profilePic}" alt="${S.name}" onerror="this.src='assets/img/prof_pic.svg'">
           ${socialsHtml()}
           <div class="contact-loc"><i class="fas fa-map-marker-alt"></i> ${S.location}</div>
         </aside>
+        <div class="hero-text">
+          <h1 class="hero-name">${S.name}</h1>
+          <p class="hero-roles">${S.roles.map((r) => `<span>${r}</span>`).join("")}</p>
+          <div class="bio">${bio}</div>
+        </div>
       </section>
 
       <h2 class="section-heading">News</h2>
@@ -243,26 +260,64 @@
   }
 
   /* ---------- CV page ---------- */
+  function timelineItemHtml(it) {
+    const current = /present/i.test(it.date);
+    const points = it.points && it.points.length
+      ? `<ul>${it.points.map((p) => `<li>${p}</li>`).join("")}</ul>` : "";
+    const loc = it.meta ? `<span class="timeline-loc"><i class="fas fa-map-marker-alt"></i> ${it.meta}</span>` : "";
+    return `<div class="timeline-item ${it.kind}${current ? " is-current" : ""}">
+      <span class="timeline-marker${current ? " is-current" : ""}"><i class="fas fa-${it.icon}"></i></span>
+      <div class="timeline-card">
+        <span class="timeline-date">${it.date}</span>
+        <h3 class="timeline-org">${it.title}</h3>
+        <p class="timeline-role">${it.sub}</p>
+        ${loc}
+        ${points}
+      </div>
+    </div>`;
+  }
+
+  function buildTimeline() {
+    const items = [];
+    S.experience.forEach((x) =>
+      items.push({ date: x.date, title: x.org, sub: x.title, meta: x.location, points: x.items, kind: "work", icon: "briefcase" })
+    );
+    S.education.forEach((e) =>
+      e.lines.forEach((l) =>
+        items.push({ date: l.right, title: e.school, sub: l.left, meta: e.location, points: [], kind: "edu", icon: "graduation-cap" })
+      )
+    );
+    items.sort((a, b) => dateVal(b.date) - dateVal(a.date));
+    return items;
+  }
+
+  function revealOnScroll(mount) {
+    const items = mount.querySelectorAll(".timeline-item");
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((el) => el.classList.add("in-view"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in-view");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+    items.forEach((el, i) => {
+      el.style.transitionDelay = Math.min(i * 60, 400) + "ms";
+      io.observe(el);
+    });
+  }
+
   function renderCV() {
     const mount = document.getElementById("cv");
     if (!mount) return;
-    const edu = S.education
-      .map(
-        (e) => `<div class="entry">
-          <div class="entry-head"><p class="entry-title">${e.school}</p><span class="entry-meta">${e.location}</span></div>
-          ${e.lines.map((l) => `<div class="entry-head"><p class="entry-sub">${l.left}</p><span class="entry-meta">${l.right}</span></div>`).join("")}
-        </div>`
-      )
-      .join("");
-    const exp = S.experience
-      .map(
-        (x) => `<div class="entry">
-          <div class="entry-head"><p class="entry-title">${x.org}</p><span class="entry-meta">${x.location} &middot; ${x.date}</span></div>
-          <p class="entry-sub">${x.title}</p>
-          ${x.items.length ? `<ul>${x.items.map((i) => `<li>${i}</li>`).join("")}</ul>` : ""}
-        </div>`
-      )
-      .join("");
+    const timeline = buildTimeline().map(timelineItemHtml).join("");
     const skills = S.skills
       .map((s) => `<div class="skill-row"><div class="skill-label">${s.label}</div><div>${s.value}</div></div>`)
       .join("");
@@ -270,15 +325,15 @@
     mount.innerHTML = `
       <h1 class="page-title">Curriculum Vitae</h1>
       <p><a class="btn" href="${S.cvPdf}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Download PDF</a></p>
-      <p class="muted-note">Tip: compile your LaTeX CV and place the resulting PDF at <code>${S.cvPdf}</code> to enable the download button and embedded preview.</p>
 
-      <h2 class="section-heading">Education</h2>
-      ${edu}
-      <h2 class="section-heading">Experience</h2>
-      ${exp}
+      <h2 class="section-heading">Timeline</h2>
+      <div class="timeline">${timeline}</div>
+
       <h2 class="section-heading">Skills</h2>
       ${skills}
     `;
+
+    revealOnScroll(mount);
   }
 
   /* ---------- Research Statement page ---------- */
