@@ -2,6 +2,8 @@
    Theme for Young-Jun Lee — inspired by the al-folio academic layout.
    ========================================================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+
 :root {
   --accent: #b509ac;            /* al-folio default theme color */
   --accent-soft: rgba(181, 9, 172, 0.08);
@@ -13,6 +15,7 @@
   --max-width: 960px;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-serif: Georgia, "Times New Roman", serif;
+  --font-display: "Space Grotesk", var(--font-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -132,6 +135,7 @@ a:hover { color: var(--text); text-decoration: underline; }
 main { padding: 40px 0 60px; min-height: 60vh; }
 
 .page-title {
+  font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -140,11 +144,24 @@ main { padding: 40px 0 60px; min-height: 60vh; }
 .page-subtitle { color: var(--text-muted); margin: 0 0 28px; }
 
 h2.section-heading {
-  font-variant: small-caps;
-  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-variant: normal;
+  font-size: 1.55rem;
   font-weight: 600;
   margin: 42px 0 14px;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-bottom: 8px;
+}
+h2.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--accent);
 }
 
 /* ---------------- About / hero ---------------- */
@@ -220,9 +237,11 @@ h2.section-heading {
 /* ---------------- Publications ---------------- */
 .pub-note { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 18px; }
 .pub-cat {
-  font-variant: small-caps;
-  font-size: 1.25rem;
+  font-family: var(--font-display);
+  font-variant: normal;
+  font-size: 1.3rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 34px 0 10px;
   color: var(--text);
 }
@@ -258,6 +277,53 @@ h2.section-heading {
   margin-left: 6px;
 }
 .pub-note-inline { display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+
+/* ---------------- Publication resource links ---------------- */
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.pub-link svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+}
+.pub-link:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+.pub-link-paper:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+.pub-link-code:hover {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+.pub-link-hf:hover {
+  border-color: #ffd21e;
+  background: #ffd21e;
+  color: #23221e;
+}
 
 /* ---------------- Talks / experience cards ---------------- */
 .entry {

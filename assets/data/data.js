@@ -122,7 +122,13 @@ window.SITE = {
     conference: [
       { id: "evofinetune", title: "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
         authors: `<b>Young-Jun Lee</b><sup>*</sup>, Seungone Kim<sup>*</sup>, Minki Kang, Alistair Cheong Liang Chuen, Zerui Chen, Seungho Han, Taehee Jung, Dongyeop Kang`,
-        venue: "Under review", note: "Accepted to CAIS AID-Wild 2026, Oral." },
+        venue: "Under review", note: "Accepted to CAIS AID-Wild 2026, Oral.",
+        links: {
+          paper: "https://arxiv.org/abs/2606.29082",
+          code: "https://github.com/Open-Galapagos/evolution-fine-tuning",
+          dataset: "https://huggingface.co/datasets/minnesotanlp/Finch-Collection",
+          models: "https://huggingface.co/collections/minnesotanlp/evolution-fine-tuning",
+        } },
       { id: "structure", title: "Structure Liberates: How Constrained Sensemaking Produces More Novel Research Output",
         authors: `James Mooney, Zae Myung Kim, <b>Young-Jun Lee</b>, Dongyeop Kang`,
         venue: "arXiv preprint", note: "" },
