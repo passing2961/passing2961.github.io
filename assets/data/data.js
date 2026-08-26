@@ -120,6 +120,10 @@ window.SITE = {
     note: "Author shown in <strong>bold</strong>; <sup>*</sup> denotes equal contribution.",
     selected: ["evofinetune", "refinebench", "multiverse", "stark", "lmshareimages", "dialogcc"],
     conference: [
+      { id: "metan", title: "Meta<sup>n</sup>: Recursive Self-Improvement through Emergent Depth",
+        authors: `Zae Myung Kim, <b>Young-Jun Lee</b>, Seungyeon Jwa, Dongyeop Kang`,
+        venue: "arXiv preprint, 2026", note: "",
+        links: { paper: "https://arxiv.org/abs/2608.24735" } },
       { id: "evofinetune", title: "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
         authors: `<b>Young-Jun Lee</b><sup>*</sup>, Seungone Kim<sup>*</sup>, Minki Kang, Alistair Cheong Liang Chuen, Zerui Chen, Seungho Han, Taehee Jung, Dongyeop Kang`,
         venue: "Under review", note: "Accepted to CAIS AID-Wild 2026, Oral.",
