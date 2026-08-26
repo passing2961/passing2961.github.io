@@ -328,6 +328,16 @@ h2.section-heading::after {
   background: var(--text);
   color: var(--bg);
 }
+.pub-link-data:hover {
+  border-color: #0f766e;
+  background: #0f766e;
+  color: #fff;
+}
+.pub-link-models:hover {
+  border-color: #7c3aed;
+  background: #7c3aed;
+  color: #fff;
+}
 .pub-link-hf:hover {
   border-color: #ffd21e;
   background: #ffd21e;
