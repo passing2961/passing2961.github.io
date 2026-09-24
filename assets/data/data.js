@@ -130,7 +130,7 @@ window.SITE = {
         } },
       { id: "evofinetune", title: "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
         authors: `<b>Young-Jun Lee</b><sup>*</sup>, Seungone Kim<sup>*</sup>, Minki Kang, Alistair Cheong Liang Chuen, Zerui Chen, Seungho Han, Taehee Jung, Dongyeop Kang`,
-        venue: "NeurIPS 2026", note: "Accepted to CAIS AID-Wild 2026, Oral.",
+        venue: "NeurIPS 2026", note: "Also at CAIS AID-Wild 2026, Oral.",
         links: {
           project: "https://open-galapagos.github.io/evolution_finetuning/",
           paper: "https://arxiv.org/abs/2606.29082",
