@@ -43,6 +43,7 @@ window.SITE = {
 
   /* ---- News (most recent first) ---- */
   news: [
+    { date: "Sep 2026", html: `Two papers, <strong>Evolution Fine-Tuning</strong> and <strong>Meta<sup>n</sup></strong>, accepted to <strong>NeurIPS 2026</strong>.` },
     { date: "Jun 2026", html: `Invited speaker at the <strong>AiDDA Conference 2026</strong> (OpenEvolve Team Session), presenting <em>Evolution Fine-Tuning</em>.` },
     { date: "May 2026", html: `Invited speaker at the <strong>CAIS 2026 Workshop on AI Agents for Discovery in the Wild (AID-Wild)</strong>; <em>Evolution Fine-Tuning</em> accepted as an Oral.` },
     { date: "Jan 2026", html: `<strong>RefineBench</strong> accepted to <strong>ICLR 2026</strong> (also Top 1%, Oral, Best Paper Runner-up at the Multi-Turn Interactions in LLMs workshop @ NeurIPS 2025).` },
@@ -122,14 +123,14 @@ window.SITE = {
     conference: [
       { id: "metan", title: "Meta<sup>n</sup>: Recursive Self-Improvement through Emergent Depth",
         authors: `Zae Myung Kim, <b>Young-Jun Lee</b>, Seungyeon Jwa, Dongyeop Kang`,
-        venue: "arXiv preprint, 2026", note: "",
+        venue: "NeurIPS 2026", note: "",
         links: {
           paper: "https://arxiv.org/abs/2608.24735",
           code: "https://github.com/minnesotanlp/meta-n",
         } },
       { id: "evofinetune", title: "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
         authors: `<b>Young-Jun Lee</b><sup>*</sup>, Seungone Kim<sup>*</sup>, Minki Kang, Alistair Cheong Liang Chuen, Zerui Chen, Seungho Han, Taehee Jung, Dongyeop Kang`,
-        venue: "Under review", note: "Accepted to CAIS AID-Wild 2026, Oral.",
+        venue: "NeurIPS 2026", note: "Accepted to CAIS AID-Wild 2026, Oral.",
         links: {
           project: "https://open-galapagos.github.io/evolution_finetuning/",
           paper: "https://arxiv.org/abs/2606.29082",
