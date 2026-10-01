@@ -132,6 +132,13 @@ window.SITE = {
           paper: "https://arxiv.org/abs/2609.40340",
           code: "https://github.com/Open-Galapagos/EvoDuet",
         } },
+      { id: "proactiveagents", title: "Foundations of Proactive Agents: Principles, Technical Layers, and Proactivity-Gym",
+        authors: `Jio Oh, Seunghyun Do, <b>Young-Jun Lee</b>, Steven Euijong Whang, Dongyeop Kang`,
+        venue: "arXiv preprint, 2026", note: "",
+        links: {
+          project: "https://harryoh99.github.io/foundations_of_proactive_agents/",
+          paper: "https://arxiv.org/abs/2609.37267",
+        } },
       { id: "metan", title: "Meta<sup>n</sup>: Recursive Self-Improvement through Emergent Depth",
         authors: `Zae Myung Kim, <b>Young-Jun Lee</b>, Seungyeon Jwa, Dongyeop Kang`,
         venue: "NeurIPS 2026", note: "",
