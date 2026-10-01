@@ -31,14 +31,17 @@ window.SITE = {
      where I was fortunate to be advised by Prof. <a href="https://scholar.google.com/citations?user=KExk0BUAAAAJ" target="_blank" rel="noopener">Ho-Jin Choi</a>
      in the Knowledge Engineering and Artificial Intelligence Lab. Before that, I received my B.S. in Software from
      Sungkyunkwan University.`,
-    `My research centers on <strong>large language models</strong> &mdash; building conversational and multi-modal agents,
-     constructing large-scale high-quality datasets, and evaluating and improving their reasoning, refinement, and reliability.
-     During my Ph.D. I built LLM-based frameworks for empathetic, personalized, and image-sharing dialogue
-     (e.g., <a href="publications.html#pub-stark">Stark</a>, <a href="publications.html#pub-dialogcc">DialogCC</a>), and studied the perception and multi-turn behavior of large vision&ndash;language models
-     (e.g., <a href="publications.html#pub-multiverse">MultiVerse</a>). I also worked on evaluating refinement capability in language models (<a href="publications.html#pub-refinebench">RefineBench</a>).`,
-    `Currently, I study how to internalize and evaluate <strong>scientific-discovery capability</strong> in AI agents,
-     including evolution-based fine-tuning across hundreds of optimization tasks and the mechanisms behind robust
-     chain-of-thought reasoning.`,
+    `During my Ph.D., I focused on <strong>conversational AI</strong> with large language models, building frameworks
+     and datasets for empathetic, personalized, and image-sharing dialogue
+     (<a href="publications.html#pub-stark">Stark</a>, <a href="publications.html#pub-dialogcc">DialogCC</a>).
+     I also studied perception and multi-turn interaction in vision&ndash;language models
+     (<a href="publications.html#pub-multiverse">MultiVerse</a>).`,
+    `My current research focuses on <strong>scientific discovery</strong> and <strong>recursive self-improvement (RSI)</strong>
+     in AI agents. I study how agents acquire scientific-discovery capabilities through evolution-based fine-tuning
+     (<a href="publications.html#pub-evofinetune">Evolution Fine-Tuning</a>), improve their use of external knowledge during search
+     (<a href="publications.html#pub-evoduet">EvoDuet</a>), and recursively improve their own problem-solving processes
+     (<a href="publications.html#pub-metan">Meta<sup>n</sup></a>). I also work on evaluating language models' ability
+     to refine their solutions (<a href="publications.html#pub-refinebench">RefineBench</a>).`,
   ],
 
   /* ---- News (most recent first) ---- */
