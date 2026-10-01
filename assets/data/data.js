@@ -119,8 +119,16 @@ window.SITE = {
   */
   publications: {
     note: "Author shown in <strong>bold</strong>; <sup>*</sup> denotes equal contribution.",
-    selected: ["evofinetune", "refinebench", "multiverse", "stark", "lmshareimages", "dialogcc"],
+    selected: ["evoduet", "evofinetune", "refinebench", "multiverse", "stark", "lmshareimages", "dialogcc"],
     conference: [
+      { id: "evoduet", title: "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+        authors: `<b>Young-Jun Lee</b>, Jinheon Baek, Soyeong Jeong, Minki Kang, Seungyeon Jwa, Jonghyun Choi, Seungho Han, Dongyeop Kang`,
+        venue: "arXiv preprint, 2026", note: "",
+        links: {
+          project: "https://open-galapagos.github.io/evoduet_project_page/",
+          paper: "https://arxiv.org/abs/2609.40340",
+          code: "https://github.com/Open-Galapagos/EvoDuet",
+        } },
       { id: "metan", title: "Meta<sup>n</sup>: Recursive Self-Improvement through Emergent Depth",
         authors: `Zae Myung Kim, <b>Young-Jun Lee</b>, Seungyeon Jwa, Dongyeop Kang`,
         venue: "NeurIPS 2026", note: "",
