@@ -349,7 +349,7 @@ window.SITE = {
 
   /* ---- Academic Service ---- */
   service: [
-    { year: "2027", html: `<strong>Conference Reviewer:</strong> ICLR` },
+    { year: "2027", html: `<strong>Conference Reviewer:</strong> ICLR, AAAI` },
     { year: "2026", html: `<strong>Conference Reviewer:</strong> ICML, ICLR, NeurIPS (ED), NeurIPS 2026 D&amp;B Track, NeurIPS 2026 Meta-Agent, COLM, EACL SRW, ARR` },
     { year: "2025", html: `<strong>Conference Reviewer:</strong> COLM, ICLR, ARR` },
     { year: "2024", html: `<strong>Conference Reviewer:</strong> EMNLP, COLING, NAACL, WiNLP @ EMNLP, ARR` },
