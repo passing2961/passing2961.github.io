@@ -46,6 +46,7 @@ window.SITE = {
 
   /* ---- News (most recent first) ---- */
   news: [
+    { date: "Oct 2026", html: `<a href="publications.html#pub-searchpathology"><strong>Search Pathology Diagnosis for Automated Discovery</strong></a> accepted to three <strong>NeurIPS 2026</strong> workshops: <strong>IAB</strong>, <strong>Meta Agents</strong>, and <strong>NewInML</strong>.` },
     { date: "Sep 2026", html: `Two papers, <strong>Evolution Fine-Tuning</strong> and <strong>Meta<sup>n</sup></strong>, accepted to <strong>NeurIPS 2026</strong>.` },
     { date: "Jun 2026", html: `Invited speaker at the <strong>AiDDA Conference 2026</strong> (OpenEvolve Team Session), presenting <em>Evolution Fine-Tuning</em>.` },
     { date: "May 2026", html: `Invited speaker at the <strong>CAIS 2026 Workshop on AI Agents for Discovery in the Wild (AID-Wild)</strong>; <em>Evolution Fine-Tuning</em> accepted as an Oral.` },
@@ -124,6 +125,15 @@ window.SITE = {
     note: "Author shown in <strong>bold</strong>; <sup>*</sup> denotes equal contribution.",
     selected: ["evoduet", "evofinetune", "refinebench", "multiverse", "stark", "lmshareimages", "dialogcc"],
     conference: [
+      { id: "scislop", title: "Science or Slop?: Benchmarking and Mitigating Scientific Slop in AI-Generated Papers",
+        authors: `Yerim Oh, <b>Young-Jun Lee</b>, Jaewoo Ahn, Gunhee Kim, Dongyeop Kang`,
+        venue: "arXiv preprint, 2026", note: "",
+        links: {
+          project: "https://yerimoh.github.io/scientific-slop-demo/",
+          paper: "https://arxiv.org/abs/2610.00531",
+          code: "https://github.com/yerimoh/ScientificSlop",
+          dataset: "https://huggingface.co/datasets/yerim0210/Scientific_Slop",
+        } },
       { id: "evoduet", title: "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
         authors: `<b>Young-Jun Lee</b>, Jinheon Baek, Soyeong Jeong, Minki Kang, Seungyeon Jwa, Jonghyun Choi, Seungho Han, Dongyeop Kang`,
         venue: "arXiv preprint, 2026", note: "",
@@ -286,6 +296,11 @@ window.SITE = {
         links: { paper: "https://doi.org/10.1016/j.datak.2023.102262" } },
     ],
     workshop: [
+      { id: "searchpathology", title: "Search Pathology Diagnosis for Automated Discovery",
+        authors: `Alistair Cheong Liang Chuen, Zerui Chen, Soham Raychaudhuri, Seungone Kim, <b>Young-Jun Lee</b>, Dongyeop Kang`,
+        venue: "The 1st Workshop on Interpreting Agent Behavior (IAB) @ NeurIPS 2026",
+        note: "Also accepted to the First Workshop on Meta Agents: Managing Agents that Manage Agents @ NeurIPS 2026; New In Machine Learning (NewInML) Workshop @ NeurIPS 2026.",
+        links: { paper: "https://openreview.net/forum?id=H9X0A1afdz" } },
       { id: "chartjudge", title: "Can MLLMs Judge Charts? Evaluating the Reliability of MLLM-as-a-Judge in Chart Understanding",
         authors: `Yujin Min, <b>Young-Jun Lee</b>, YunSeok Choi`,
         venue: "RespMultimodal Workshop @ KDD 2026", note: "" },
