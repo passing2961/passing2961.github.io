@@ -46,10 +46,10 @@ window.SITE = {
 
   /* ---- News (most recent first) ---- */
   news: [
-    { date: "Oct 2026", html: `<a href="publications.html#pub-searchpathology"><strong>Search Pathology Diagnosis for Automated Discovery</strong></a> accepted to three <strong>NeurIPS 2026</strong> workshops: <strong>IAB</strong>, <strong>Meta Agents</strong>, and <strong>NewInML</strong>.` },
-    { date: "Sep 2026", html: `Two papers, <strong>Evolution Fine-Tuning</strong> and <strong>Meta<sup>n</sup></strong>, accepted to <strong>NeurIPS 2026</strong>.` },
-    { date: "Jun 2026", html: `Invited speaker at the <strong>AiDDA Conference 2026</strong> (OpenEvolve Team Session), presenting <em>Evolution Fine-Tuning</em>.` },
-    { date: "May 2026", html: `Invited speaker at the <strong>CAIS 2026 Workshop on AI Agents for Discovery in the Wild (AID-Wild)</strong>; <em>Evolution Fine-Tuning</em> accepted as an Oral.` },
+    { date: "Oct 2026", html: `<a href="publications.html#pub-searchpathology"><strong>Search Pathology Diagnosis for Automated Discovery</strong></a> accepted to three <strong>NeurIPS 2026</strong> workshops: <a href="https://iab-agents.github.io/" target="_blank" rel="noopener"><strong>IAB</strong></a>, <a href="https://meta-agents-workshop.github.io/" target="_blank" rel="noopener"><strong>Meta Agents</strong></a>, and <a href="https://newinml.github.io/NewInML2026NeurIPS/" target="_blank" rel="noopener"><strong>NewInML</strong></a>.` },
+    { date: "Sep 2026", html: `Two papers, <a href="publications.html#pub-evofinetune"><strong>Evolution Fine-Tuning</strong></a> and <a href="publications.html#pub-metan"><strong>Meta<sup>n</sup></strong></a>, accepted to <strong>NeurIPS 2026</strong>.` },
+    { date: "Jun 2026", html: `Invited speaker at the <strong>AiDDA Conference 2026</strong> (OpenEvolve Team Session), presenting <a href="publications.html#pub-evofinetune"><em>Evolution Fine-Tuning</em></a>.` },
+    { date: "May 2026", html: `Invited speaker at the <strong>CAIS 2026 Workshop on AI Agents for Discovery in the Wild (AID-Wild)</strong>; <a href="publications.html#pub-evofinetune"><em>Evolution Fine-Tuning</em></a> accepted as an Oral.` },
     { date: "Jan 2026", html: `<strong>RefineBench</strong> accepted to <strong>ICLR 2026</strong> (also Top 1%, Oral, Best Paper Runner-up at the Multi-Turn Interactions in LLMs workshop @ NeurIPS 2025).` },
     { date: "Jul 2025", html: `Started as an <strong>Applied Scientist Intern</strong> at <strong>Amazon</strong>, working on partial chain-of-thought fine-tuning for robust reasoning LMs.` },
     { date: "Aug 2025", html: `Successfully defended my Ph.D. at <strong>KAIST</strong>. ` },
