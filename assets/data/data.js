@@ -7,7 +7,7 @@ window.SITE = {
   /* ---- Identity / header ---- */
   name: "Young-Jun Lee",
   roles: [
-    "Incoming Applied Scientist @ Amazon (Alexa AI)",
+    "Applied Scientist @ Amazon (Alexa AI)",
     "Visiting Scholar @ University of Minnesota",
   ],
   profilePic: "assets/img/youngjun_lee_profile.png",
@@ -24,7 +24,7 @@ window.SITE = {
 
   /* ---- About-page bio paragraphs (HTML allowed) ---- */
   bio: [
-    `I am an incoming <strong>Applied Scientist</strong> at <strong>Amazon</strong> (Alexa AI), starting Fall 2026,
+    `I am an <strong>Applied Scientist</strong> at <strong>Amazon</strong> (Alexa AI)
      and currently a <strong>Visiting Scholar</strong> at the <strong>University of Minnesota</strong>, working with
      Prof. <a href="https://dykang.github.io/" target="_blank" rel="noopener">Dongyeop Kang</a>.`,
     `I completed my <strong>Ph.D. in Computer Science</strong> at <strong>KAIST</strong> (School of Computing),
@@ -80,7 +80,7 @@ window.SITE = {
     {
       org: "Amazon",
       location: "Bellevue, WA, USA",
-      title: "Incoming Applied Scientist, Alexa AI",
+      title: "Applied Scientist, Alexa AI",
       date: "Oct 2026 &ndash; Present",
       items: [],
     },
