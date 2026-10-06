@@ -8,7 +8,6 @@ window.SITE = {
   name: "Young-Jun Lee",
   roles: [
     "Applied Scientist @ Amazon (Alexa AI)",
-    "Visiting Scholar @ University of Minnesota",
   ],
   profilePic: "assets/img/youngjun_lee_profile.png",
   location: "Minneapolis, MN, USA",
@@ -24,8 +23,8 @@ window.SITE = {
 
   /* ---- About-page bio paragraphs (HTML allowed) ---- */
   bio: [
-    `I am an <strong>Applied Scientist</strong> at <strong>Amazon</strong> (Alexa AI)
-     and currently a <strong>Visiting Scholar</strong> at the <strong>University of Minnesota</strong>, working with
+    `I am an <strong>Applied Scientist</strong> at <strong>Amazon</strong> (Alexa AI).
+     Previously, I was a <strong>Visiting Scholar</strong> at the <strong>University of Minnesota</strong>, where I worked with
      Prof. <a href="https://dykang.github.io/" target="_blank" rel="noopener">Dongyeop Kang</a>.`,
     `I completed my <strong>Ph.D. in Computer Science</strong> at <strong>KAIST</strong> (School of Computing),
      where I was fortunate to be advised by Prof. <a href="https://scholar.google.com/citations?user=KExk0BUAAAAJ" target="_blank" rel="noopener">Ho-Jin Choi</a>
@@ -90,7 +89,7 @@ window.SITE = {
       title: "Visiting Scholar",
       date: "Mar 2025 &ndash; Sep 2026",
       items: [
-        "Researching how to internalize scientific-discovery capability into large language models, and how to evaluate scientific-discovery capability in AI agents.",
+        "Researched how to internalize scientific-discovery capability into large language models, and how to evaluate scientific-discovery capability in AI agents.",
       ],
     },
     {
