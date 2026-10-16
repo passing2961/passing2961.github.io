@@ -39,8 +39,13 @@ window.SITE = {
      in AI agents. I study how agents acquire scientific-discovery capabilities through evolution-based fine-tuning
      (<a href="publications.html#pub-evofinetune">Evolution Fine-Tuning</a>), improve their use of external knowledge during search
      (<a href="publications.html#pub-evoduet">EvoDuet</a>), and recursively improve their own problem-solving processes
-     (<a href="publications.html#pub-metan">Meta<sup>n</sup></a>). I also work on evaluating language models' ability
-     to refine their solutions (<a href="publications.html#pub-refinebench">RefineBench</a>).`,
+     (<a href="publications.html#pub-metan">Meta<sup>n</sup></a>). I also evaluate the quality and reliability of AI-driven research:
+     <a href="publications.html#pub-intotheunknown">Into the Unknown</a> benchmarks agents on open scientific research problems,
+     and <a href="publications.html#pub-scislop">Science or Slop?</a> benchmarks and mitigates scientific slop in AI-generated papers.
+     I am currently developing <a href="https://sciveri-bench.com/" target="_blank" rel="noopener">SciVeri-Bench</a>, a scientist-driven
+     benchmark that compares agents' scientific critiques, evolving rubrics, and research-quality judgments with those of domain
+     scientists. I also study language models' ability to refine their solutions
+     (<a href="publications.html#pub-refinebench">RefineBench</a>).`,
   ],
 
   /* ---- News (most recent first) ---- */
